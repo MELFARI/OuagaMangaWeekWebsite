@@ -4,6 +4,7 @@ import { useToast } from '@/hooks/use-toast';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import AnimeCharacters from '@/components/AnimeCharacters';
 import Schedule from '@/components/Schedule';
 import Partners from '@/components/Partners';
 import Contact from '@/components/Contact';
@@ -32,6 +33,7 @@ const Index = () => {
         <Navbar />
         <Hero />
         <About />
+        <AnimeCharacters />
         <Schedule />
         <Partners />
         <Contact />

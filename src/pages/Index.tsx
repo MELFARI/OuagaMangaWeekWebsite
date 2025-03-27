@@ -1,5 +1,5 @@
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -9,23 +9,34 @@ import Schedule from '@/components/Schedule';
 import Partners from '@/components/Partners';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Loading from '@/components/Loading';
 
 // Add framer-motion dependency
 import { AnimatePresence, motion } from 'framer-motion';
 
 const Index = () => {
   const { toast } = useToast();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Welcome toast notification
-    setTimeout(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setLoading(false);
+      
+      // Welcome toast notification
       toast({
         title: "Bienvenue à Ouaga Manga Week!",
         description: "La première semaine otaku du Burkina Faso, du 9 au 13 juillet 2024.",
         variant: "default",
       });
-    }, 2000);
+    }, 5000); // 5 seconds loading screen
+
+    return () => clearTimeout(timer);
   }, [toast]);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <AnimatePresence mode="wait">

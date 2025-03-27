@@ -20,11 +20,11 @@ const Index = () => {
     // Welcome toast notification
     setTimeout(() => {
       toast({
-        title: "Bienvenue à Ouaga Manga Week 3!",
-        description: "La troisième semaine otaku du Burkina Faso, du 9 au 13 juillet 2024.",
+        title: "Bienvenue à Ouaga Manga Week!",
+        description: "La première semaine otaku du Burkina Faso, du 9 au 13 juillet 2024.",
         variant: "default",
       });
-    }, 4000); // Delay toast until after loading animation
+    }, 2000);
   }, [toast]);
 
   return (
@@ -48,7 +48,7 @@ const Index = () => {
         {/* Scroll to top button */}
         <motion.button 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center shadow-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600"
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-manga-red text-white flex items-center justify-center shadow-lg hover:bg-manga-red/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-manga-red"
           aria-label="Scroll to top"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

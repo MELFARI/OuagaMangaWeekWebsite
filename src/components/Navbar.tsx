@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from 'lucide-react';
+import { Menu, X, GamepadIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -28,6 +28,7 @@ const Navbar = () => {
     { label: "Accueil", href: "/" },
     { label: "À propos", href: "#about" },
     { label: "Programme", href: "#schedule" },
+    { label: "Mini Jeu", href: "#game" },
     { label: "Partenaires", href: "#partners" },
     { label: "Contact", href: "#contact" }
   ];

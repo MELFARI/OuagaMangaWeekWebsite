@@ -10,6 +10,7 @@ import Partners from '@/components/Partners';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Loading from '@/components/Loading';
+import MiniGame from '@/components/MiniGame';
 
 // Add framer-motion dependency
 import { AnimatePresence, motion } from 'framer-motion';
@@ -52,6 +53,18 @@ const Index = () => {
         <About />
         <AnimeCharacters />
         <Schedule />
+        
+        {/* Add the MiniGame component before Partners */}
+        <section id="game" className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <h2 className="section-title text-center mx-auto">Mini Jeu</h2>
+            <p className="text-center mb-10 max-w-2xl mx-auto">
+              Amusez-vous avec notre mini-jeu pendant que vous explorez le site de Ouaga Manga Week!
+            </p>
+            <MiniGame />
+          </div>
+        </section>
+        
         <Partners />
         <Contact />
         <Footer />
